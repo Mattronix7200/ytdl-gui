@@ -20,6 +20,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\loader.gif" />
+    <None Remove="Resources\Rolling%401x-1.0s-200px-200px.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="g25.ico" />
   </ItemGroup>
 

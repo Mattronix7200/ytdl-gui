@@ -117,6 +117,135 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox16.Text" xml:space="preserve">
+    <value>Istnieje obejście tego problemu. Wymaga ono plików cookie z przeglądarki o tym samym adresie IP, który będzie używany w tym programie. Wykonaj następujące kroki:
+
+- Odśwież pliki cookie w przeglądarce, przechodząc do witryny, z której próbujesz pobrać plik. Jeśli nie zrobiłeś tego w ciągu ostatnich 30 minut, musisz zrobić to ponownie.
+
+- Znajdź ciąg User-Agent przeglądarki; potrzebujesz całego ciągu (zaczynając od Mozilla/5.0) i musi on być aktualny:  najprostszym sposobem jest wpisanie "my user-agent" w wyszukiwarkę: duckduckgo, google itp. Dla przeglądarek Firefox, można znaleźć user-agent przechodząc do strony "about:support", w przypadku przeglądarek opartych na Chromium, można go znaleźć na stronie "chrome://version" (lub prefiksie, takim jak brave://version itp.). 
+
+- Zdobytą wartość UserAgent przeglądarki, należy wkleić do ustawień pobierania:"UserAgent"
+
+Możesz również użyć opcji "Plik cookies (Spotify)". Należy pamiętać, że pliki cookie muszą zostać wyeksportowane ze świeżej sesji przeglądarki w ciągu ostatnich 30 minut. 
+
+UWAGA: Aby uniknąc problemów z plikami Cookies lub nieprawidłowym UserAgent, należy korzystać z przeglądarki Firefox.</value>
+  </data>
+  <data name="textBox15.Text" xml:space="preserve">
+    <value>Przekazywanie plików cookie do yt-dlp jest dobrym sposobem na obejście logowania, gdy dany ekstraktor nie implementuje go jawnie. Innym przypadkiem użycia jest obejście CAPTCHA, które niektóre witryny wymagają rozwiązania w określonych przypadkach w celu uzyskania dostępu (np. YouTube, CloudFlare).
+
+Jeśli chcesz ręcznie przekazać pliki cookie, użyj opcji "Plik cookies (Spotify)" w ustawieniach pobierania. Aby to zrobić musisz przygotować plik cookies.txt- w tym celu należy użyć zgodnego rozszerzenia przeglądarki do eksportowania plików cookie, takiego jak Get cookies.txt LOCALLY dla Chrome lub cookies.txt dla Firefox. Podobnie jak w przypadku każdego rozszerzenia przeglądarki, należy uważać na to, co się instaluje. Jeśli wcześniej zainstalowano rozszerzenie Chrome "Get cookies.txt" (nie "LOCALLY"), zaleca się jego natychmiastowe odinstalowanie; zostało ono zgłoszone jako złośliwe oprogramowanie i usunięte ze sklepu Chrome Web Store.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Teraz po pobraniu rozszerzenia, przechodzimy na stronę z której chcemy pobrać ograniczone elementy, np: YouTube Music. Klikamy na ikonkę rozszerzenia, i wybieramy opcję "Export all". Należy pamiętać, że plik cookie musi być w formacie Mozilla/Netscape, a pierwszy wiersz pliku cookie musi mieć postać # HTTP Cookie File lub # Netscape HTTP Cookie File. Upewnij się, że masz prawidłowy format nowej linii w pliku cookie i przekonwertuj nowe linie, jeśli to konieczne, aby odpowiadały Twojemu systemowi operacyjnemu, a mianowicie CRLF (\r\n) dla systemu Windows. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gdy już wyeksportujesz plik cookies.txt, należy dodać ścieżkę do tego pliku w ustawieniach pobierania:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Błąd HTTP 400: Bad Request który pojawia się w momencie dodania plików cookies.txt-  oznacza, że podano nieprawidłowy plik cookies do programu. Należy upewnić się czy prawidłowo wyeksportowano plik cookies.txt.</value>
+  </data>
+  <data name="textBox14.Text" xml:space="preserve">
+    <value>Te dwa kody błędów wskazują, że usługa blokuje Twój adres IP z powodu nadmiernego użycia. Zazwyczaj jest to miękka blokada, co oznacza, że możesz uzyskać dostęp ponownie po rozwiązaniu CAPTCHA. Wystarczy otworzyć przeglądarkę i rozwiązać CAPTCHA na stronie z której pobierasz element, a następnie przekazać plik cookie programu
+
+Pamiętaj, że jeśli twój komputer ma wiele zewnętrznych adresów IP, powinieneś również przekazać dokładnie ten sam adres IP, którego użyłeś do rozwiązania CAPTCHA za pomocą ustawień sieciowych: "Adres IP klienta". Konieczne może być również przekazanie nagłówka HTTP User-Agent twojej użytej przeglądarki internetowej.
+
+Jeśli tak nie jest (usługa nie sugeruje rozwiązania CAPTCHA), możesz skontaktować się z usługą i poprosić o odblokowanie adresu IP lub - jeśli masz już adres IP na białej liście - użyć opcji Proxy lub Geo-Proxy, aby wybrać inny adres IP.</value>
+  </data>
+  <data name="textBox13.Text" xml:space="preserve">
+    <value>Domyślnie program automatycznie wykrywa film z wklejonego linku, jednak jeśli z jakiegoś powodu to nie działa, możesz skopiować link bez tzw: "URL redirect" (dodatkowych parametrów dopisanych do linku), mniej więcej może wyglądać on tak:
+
+https://www.tiktok.com/@_healthy_food_lover/video/7205148996195601670?is_from_webapp=1&amp;sender_device=pc
+
+Poprawka polega na tym aby usunąć z niego ostatnią cześć linku (tzw: URL redirect), po którym link powinien wyglądać tak:
+
+https://www.tiktok.com/@_healthy_food_lover/video/7205148996195601670
+
+Dodatkowo upewnij się czy pobierany element nie posiada dozwolonych znaków w tytule elementu (np: emoji, duża ilość tekstu), gdyż może to również spowodować przerwanie pobierania. </value>
+  </data>
+  <data name="textBox12.Text" xml:space="preserve">
+    <value>Odznacz opcję "Pomiń konwersję pobranego wideo" - ta poprawka działa, gdy pobierasz pliki z serwisu SoundCloud. W przeciwnym przypadku, upewnij się czy podaleś prawidłowy folder w ustawieniach pobierania.</value>
+  </data>
+  <data name="textBox11.Text" xml:space="preserve">
+    <value>Przetestowaliśmy działanie programu w serwisach: Facebook, wykop, TVP Vod, Spotify, Soundcloud, CDA oraz TikTok. Pełna lista serwisów znajduje się pod tym adresem:
+
+https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md##
+
+Proszę mieć na uwadze to, iż nie wszystkie serwisy, również te wspierane, mogą działać prawidłowo, z powodu zabezpieczeń Cloudflare, Google, DRM, które blokują pobieranie z tych serwisów</value>
+  </data>
   <data name="textBox5.Text" xml:space="preserve">
     <value>Wynika to z procesu wykonywanego przez moduł pobierający, który niestety ma swoje ograniczenia. 
 W przypadku pobierania muzyki z YouTube Music lub Spotify, pomimo ustawienia wysokiej jakości, 
@@ -218,6 +347,55 @@ OPUS (low quality): This is a lossy audio compression format suitable for audio 
 VORBIS (medium quality): This is a free and open lossy audio compression format, most often used in conjunction with the Ogg container. The file format is an example used in Spotify streaming. 
 
 M4A (medium quality): This is an audio file format created by Apple that stores various types of audio content, stored in MPEG-4 format and encoded with Advanced Audio Coding (AAC) or Apple Lossless Audio Codec (ALAC), characterized by compression without loss of quality.</value>
+  </data>
+  <data name="textBox23.Text" xml:space="preserve">
+    <value>There is a workaround for this problem. It requires cookies from a browser with the same IP address that will be used for this program. Perform the following steps:
+
+- Refresh the cookies in your browser by going to the site you are trying to download from. If you haven't done this in the last 30 minutes, you need to do it again.
+
+- Find your browser's User-Agent string; you need the entire string (starting with Mozilla/5.0) and it must be up-to-date: the easiest way is to type "my user-agent" into a search engine: duckduckgo, google, etc. For Firefox browsers, you can find the user-agent by going to the "about:support" page; for Chromium-based browsers, you can find it at "chrome://version" (or a prefix such as brave://version, etc.). 
+
+- The acquired value of the browser's UserAgent, paste it into the download settings: "UserAgent".
+
+You can also use the "Cookie (Spotify)" option in download settings. Note that cookies must be exported from a fresh browser session within the last 30 minutes. 
+
+NOTE: To avoid problems with cookies or invalid UserAgent, use Firefox browser.</value>
+  </data>
+  <data name="textBox24.Text" xml:space="preserve">
+    <value>Passing cookies to yt-dlp is a good way to bypass login when the extractor in question does not implement it explicitly. Another use case is to bypass CAPTCHAs that some sites require to be resolved in certain cases in order to gain access (e.g. YouTube, CloudFlare).
+
+If you want to manually pass cookies, use the "Cookie (Spotify)" option in the download settings. To do so, you'll need to prepare a cookies.txt file - to do so, use a compatible browser extension to export cookies, such as Get cookies.txt LOCALLY for Chrome or cookies.txt for Firefox. As with any browser extension, be careful what you install. If you have previously installed the "Get cookies.txt" Chrome extension (not "LOCALLY"), it is recommended to uninstall it immediately; it has been reported as malware and removed from the Chrome Web Store.
+
+Now, after downloading the extension, we go to the page from which we want to download limited items, such as: YouTube Music. We click on the icon of the extension, and select "Export all". Note that the cookie must be in Mozilla/Netscape format, and the first line of the cookie must be # HTTP Cookie File or # Netscape HTTP Cookie File. Make sure you have the correct newline format in the cookie, and convert the newlines as necessary to match your operating system, namely CRLF for Windows. 
+
+Once you have exported the cookies.txt file, you should add the path to this file in the download settings.
+
+HTTP error 400: Bad Request which appears when you add cookies.txt- means that you have specified an invalid cookie file to the program. Make sure you have exported the cookies.txt file correctly.</value>
+  </data>
+  <data name="textBox25.Text" xml:space="preserve">
+    <value>These two error codes indicate that the service is blocking your IP address due to excessive usage. This is usually a soft block, which means you can access again after solving the CAPTCHA. All you have to do is open your browser and solve the CAPTCHA on the page you are downloading the item from, then pass the program's cookie
+
+Note that if your computer has multiple external IP addresses, you should also pass the exact same IP address that you used to solve the CAPTCHA using the network settings: "Client IP address". You may also need to pass the HTTP User-Agent header of your used web browser.
+
+If this is not the case (the service does not suggest solving the CAPTCHA), you can contact the service and ask it to unblock the IP address, or - if you already have an IP address whitelisted - use the Proxy or Geo-Proxy option to select a different IP address.</value>
+  </data>
+  <data name="textBox28.Text" xml:space="preserve">
+    <value>We tested the program's performance on services: Facebook, wykop, TVP Vod, Spotify, Soundcloud, CDA and TikTok. The full list of services can be found at this link:
+
+https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md##
+
+Please keep in mind that not all services, including supported ones, may work properly, due to Cloudflare, Google, DRM security features that block downloads from these services</value>
+  </data>
+  <data name="textBox26.Text" xml:space="preserve">
+    <value>By default, the program automatically detects the video from the pasted link, but if for some reason this does not work, you can copy the link without the so-called: "URL redirect" (additional parameters added to the link), more or less it can look like this:
+
+https://www.tiktok.com/@_healthy_food_lover/video/7205148996195601670?is_from_webapp=1&amp;sender_device=pc
+
+The fix is to remove the last part of the link (called: URL redirect), after which the link should look like this:
+
+https://www.tiktok.com/@_healthy_food_lover/video/7205148996195601670
+
+In addition, make sure that the downloaded item does not have allowed characters in the item title (e.g.: emoji, large amount of text), as this can also interrupt the download. </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

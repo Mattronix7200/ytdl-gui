@@ -83,6 +83,7 @@
             linkLabel1.TabIndex = 3;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "https://github.com/yt-dlp/yt-dlp\r\n";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // linkLabel2
             // 
@@ -95,6 +96,7 @@
             linkLabel2.TabIndex = 4;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "https://github.com/spotDL/spotify-downloader\r\n";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // linkLabel3
             // 
@@ -107,6 +109,7 @@
             linkLabel3.TabIndex = 5;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "https://www.flaticon.com";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // linkLabel4
             // 
@@ -119,6 +122,7 @@
             linkLabel4.TabIndex = 6;
             linkLabel4.TabStop = true;
             linkLabel4.Text = "https://windowsbase.pl";
+            linkLabel4.LinkClicked += linkLabel4_LinkClicked;
             // 
             // Form2
             // 

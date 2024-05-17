@@ -2573,6 +2573,7 @@
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 516);
+            Controls.Add(panel1);
             Controls.Add(frameStatus);
             Controls.Add(button10);
             Controls.Add(button2);
@@ -2580,10 +2581,9 @@
             Controls.Add(pictureBox14);
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox11);
-            Controls.Add(panel3);
-            Controls.Add(panel1);
-            Controls.Add(panel2);
             Controls.Add(pictureBox1);
+            Controls.Add(panel2);
+            Controls.Add(panel3);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;

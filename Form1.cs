@@ -1654,8 +1654,8 @@ namespace ytdl_gui
         private void button4_Click_1(object sender, EventArgs e)
         {
 
-            string textToAppend = textBox19.Text;
-            Regex urlCheck = new Regex(@"^http(s)?://([\w-]+.)+[\w-]+(/[\w- ./?%&=])?$");
+            string textToAppend = "\"" + textBox19.Text + "\"";
+            Regex urlCheck = new Regex(@"^http(s)?://");
             if ((!string.IsNullOrEmpty(textBox19.Text) && urlCheck.IsMatch(textToAppend)) || (File.Exists(queuePath) && new FileInfo(queuePath).Length > 0))
             {
                 richTextBox1.SelectionStart = richTextBox1.TextLength;
@@ -1733,6 +1733,7 @@ namespace ytdl_gui
                 string selectedVal_textBox17 = "--password " + textBox17.Text + " ";
                 string selectedVal_textBox18 = "--twofactor " + textBox18.Text + " ";
                 string selectedVal_textBox20 = "--cookie-file " + textBox20.Text + " --bitrate disable ";
+                string selectedVal_textBox20_ytdl = "--cookies " + textBox20.Text + " ";
                 string? selectedVal_comboBox3 = comboBox3.SelectedItem?.ToString();
                 string? valueToStore1 = "--audio-quality " + comboBox3Map[selectedVal_comboBox3] + " ";
                 string? valueToStore1_spotify = "--bitrate " + comboBox3Map[selectedVal_comboBox3] + " ";
@@ -2083,6 +2084,7 @@ namespace ytdl_gui
 
                 if (!System.String.IsNullOrEmpty(textBox20.Text))
                 {
+                    finalResult += selectedVal_textBox20_ytdl;
                     finalResult2 += selectedVal_textBox20;
                 }
 
@@ -2238,7 +2240,7 @@ namespace ytdl_gui
                         Arguments = $"/C {ytbinSpot} {processValue} {linkURL}",
                         UseShellExecute = false,
                         RedirectStandardOutput = true,
-                        CreateNoWindow = false,
+                        CreateNoWindow = true,
                         WorkingDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin")
                     };
 
@@ -2571,9 +2573,9 @@ namespace ytdl_gui
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string textToAppend = textBox19.Text;
-            Regex urlCheck = new Regex(@"^http(s)?://([\w-]+.)+[\w-]+(/[\w- ./?%&=])?$");
-            if (!System.String.IsNullOrEmpty(textBox19.Text) && urlCheck.IsMatch(textToAppend))
+            string textToAppend = "\"" + textBox19.Text + "\"";
+
+            if (!System.String.IsNullOrEmpty(textBox19.Text))
             {
                 File.AppendAllText(queuePath, textToAppend + Environment.NewLine);
 
@@ -2612,7 +2614,7 @@ namespace ytdl_gui
                 }
                 else
                 {
-                    richTextBox1.AppendText("\r\n▲ ERR05 ▲ Nie można dodać pustego lub uszkodzonego linku do pobrania.");
+                    richTextBox1.AppendText("\r\n▲ ERR05 ▲ Nie można dodać pustego linku do pobrania.");
                 }
 
                 richTextBox1.SelectionColor = richTextBox1.ForeColor;
