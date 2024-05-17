@@ -47,8 +47,12 @@ namespace ytdl_gui
             this.ShowInTaskbar = false;
             form7 = new Form7();
             form7.Show();
+            form7.label1.Text = "Sprawdzam aktualizacje...";
             CheckForUpdates();
-            await Task.Delay(3000);
+            form7.label1.Text = "Ładowanie ustawień...";
+            await Task.Delay(2500);
+            form7.label1.Text = "Uruchamianie aplikacji...";
+            await Task.Delay(500);
             form7.Close();
             this.ShowInTaskbar = true;
             this.Opacity = 1;

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.DataFormats;
 using System.IO;
+using Microsoft.VisualBasic.Devices;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ytdl_gui
 {
@@ -146,18 +149,37 @@ namespace ytdl_gui
         {
             listBox1.Items.Clear();
             var files = Directory.GetFiles("./data/configs");
-            Dictionary<string, string> fileDescriptions = new Dictionary<string, string>()
+            Dictionary<string, string> fileDescriptions = new Dictionary<string, string>();
+            if (langSel == 1)
             {
-                {"config01.ini", "Domyślne ustawienia"},
-                {"config02.ini", "Pobieranie muzyki - MP3"},
-                {"config03.ini", "Pobieranie muzyki - ALAC"},
-                {"config04.ini", "Pobieranie filmu - najlepsza jakość"},
-                {"config05.ini", "Pobieranie filmu z ograniczeniem daty"},
-                {"config06.ini", "Pobieranie filmu z ograniczeniem rozmiaru"},
-                {"config07.ini", "Pobieranie co 2 filmu z playlisty"},
-                {"config08.ini", "Pobieranie filmu z napisami polskimi"},
-                {"config09.ini", "Pobieranie filmu z napisami angielskimi"}
-            };
+                fileDescriptions = new Dictionary<string, string>()
+                {
+                    {"config01.ini", "Default Settings"},
+                    {"config02.ini", "Download music - MP3"},
+                    {"config03.ini", "Download music - ALAC"},
+                    {"config04.ini", "Download movie- best quality"},
+                    {"config05.ini", "Download every video fit in selected date"},
+                    {"config06.ini", "Download every video fit in selected size"},
+                    {"config07.ini", "Download every second video from playlist"},
+                    {"config08.ini", "Download video with Polish subtitles"},
+                    {"config09.ini", "Download video with English subtitles"}
+                };
+            }
+            else
+            {
+                fileDescriptions = new Dictionary<string, string>()
+                {
+                    {"config01.ini", "Domyślne ustawienia"},
+                    {"config02.ini", "Pobieranie muzyki - MP3"},
+                    {"config03.ini", "Pobieranie muzyki - ALAC"},
+                    {"config04.ini", "Pobieranie filmu - najlepsza jakość"},
+                    {"config05.ini", "Pobieranie filmu z ograniczeniem daty"},
+                    {"config06.ini", "Pobieranie filmu z ograniczeniem rozmiaru"},
+                    {"config07.ini", "Pobieranie co 2 filmu z playlisty"},
+                    {"config08.ini", "Pobieranie filmu z napisami polskimi"},
+                    {"config09.ini", "Pobieranie filmu z napisami angielskimi"}
+                };
+            }
 
             foreach (var file in files)
             {
@@ -176,6 +198,7 @@ namespace ytdl_gui
             string lastConfigDescription = fileDescriptions.ContainsKey(lastConfigFile) ? fileDescriptions[lastConfigFile] : lastConfigFile;
             listBox1.SelectedItem = lastConfigDescription;
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -208,7 +231,7 @@ namespace ytdl_gui
                     var validFile = true;
                     var requiredKeys = new List<string>
                     {
-                        "bkgSel", "checkBox1", "checkBox2", "checkBox3", "checkBox4", "checkBox5", "checkBox6",
+                        "langSel", "bkgSel", "checkBox1", "checkBox2", "checkBox3", "checkBox4", "checkBox5", "checkBox6",
                         "checkBox7", "checkBox8", "checkBox9", "checkBox10", "checkBox11", "checkBox12", "checkBox13",
                         "checkBox14", "checkBox15", "checkBox16", "checkBox17", "checkBox18", "checkBox19",
                         "checkBox20", "checkBox21", "checkBox22", "checkBox23", "checkBox24", "checkBox25",
@@ -235,9 +258,13 @@ namespace ytdl_gui
                     }
                     else
                     {
+                        using (StreamWriter sw = File.AppendText(filePath))
+                        {
+                            sw.WriteLine($"langSel={langSel}");
+                        }
                         string destPath = "./data/configs/" + Path.GetFileName(filePath);
                         File.Copy(filePath, destPath, true);
-                        listBox1.Items.Add(Path.GetFileName(filePath)); // Dodaj nazwę pliku do listBox1
+                        listBox1.Items.Add(Path.GetFileName(filePath));
                     }
                 }
                 catch (Exception ex)
@@ -248,21 +275,39 @@ namespace ytdl_gui
         }
 
 
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> fileDescriptions2 = new Dictionary<string, string>()
+            Dictionary<string, string> fileDescriptions2 = new Dictionary<string, string>();
+            if (langSel == 1)
             {
-                {"Domyślne ustawienia", "config01.ini"},
-                {"Pobieranie muzyki - MP3", "config02.ini"},
-                {"Pobieranie muzyki - ALAC", "config03.ini"},
-                {"Pobieranie filmu - najlepsza jakość", "config04.ini"},
-                {"Pobieranie filmu z ograniczeniem daty", "config05.ini"},
-                {"Pobieranie filmu z ograniczeniem rozmiaru", "config06.ini"},
-                {"Pobieranie co 2 filmu z playlisty", "config07.ini"},
-                {"Pobieranie filmu z napisami polskimi", "config08.ini"},
-                {"Pobieranie filmu z napisami angielskimi", "config09.ini"}
-            };
+                fileDescriptions2 = new Dictionary<string, string>()
+                {
+                    {"Default Settings", "config01.ini"},
+                    {"Download music - MP3", "config02.ini"},
+                    {"Download music - ALAC", "config03.ini"},
+                    {"Download movie- best quality", "config04.ini"},
+                    {"Download every video fit in selected date", "config05.ini"},
+                    {"Download every video fit in selected size", "config06.ini"},
+                    {"Download every second video from playlist", "config07.ini"},
+                    {"Download video with Polish subtitles", "config08.ini"},
+                    {"Download video with English subtitles", "config09.ini"}
+                };
+            }
+            else
+            {
+                fileDescriptions2 = new Dictionary<string, string>()
+                {
+                    {"Domyślne ustawienia", "config01.ini"},
+                    {"Pobieranie muzyki - MP3", "config02.ini"},
+                    {"Pobieranie muzyki - ALAC", "config03.ini"},
+                    {"Pobieranie filmu - najlepsza jakość", "config04.ini"},
+                    {"Pobieranie filmu z ograniczeniem daty", "config05.ini"},
+                    {"Pobieranie filmu z ograniczeniem rozmiaru", "config06.ini"},
+                    {"Pobieranie co 2 filmu z playlisty", "config07.ini"},
+                    {"Pobieranie filmu z napisami polskimi", "config08.ini"},
+                    {"Pobieranie filmu z napisami angielskimi", "config09.ini"}
+                };
+            }
 
             if (listBox1.SelectedItem != null)
             {
@@ -274,16 +319,19 @@ namespace ytdl_gui
                 if (saveFileDialog.FileName != "")
                 {
                     string selectedFile = listBox1.SelectedItem.ToString();
+                    string fileName;
                     if (fileDescriptions2.ContainsKey(selectedFile))
                     {
-                        string fileName = fileDescriptions2[selectedFile];
-                        System.IO.File.Copy(Path.Combine("./data/configs", fileName), saveFileDialog.FileName, true);
+                        fileName = fileDescriptions2[selectedFile];
                     }
+                    else
+                    {
+                        fileName = selectedFile;
+                    }
+                    System.IO.File.Copy(Path.Combine("./data/configs", fileName), saveFileDialog.FileName, true);
                 }
             }
         }
-
-
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -293,55 +341,39 @@ namespace ytdl_gui
             label7.Visible = true;
         }
 
-
-        //private void pictureBox4_Click(object sender, EventArgs e)
-        //{
-        //    Dictionary<string, string> fileDescriptions2 = new Dictionary<string, string>()
-        //    {
-        //        {"Domyślne ustawienia", "config01.ini"},
-        //        {"Pobieranie muzyki - MP3", "config02.ini"},
-        //        {"Pobieranie muzyki - ALAC", "config03.ini"},
-        //        {"Pobieranie filmu - najlepsza jakość", "config04.ini"},
-        //        {"Pobieranie filmu z ograniczeniem daty", "config05.ini"},
-        //        {"Pobieranie filmu z ograniczeniem rozmiaru", "config06.ini"},
-        //        {"Pobieranie co 2 filmu z playlisty", "config07.ini"},
-        //        {"Pobieranie filmu z napisami polskimi", "config08.ini"},
-        //        {"Pobieranie filmu z napisami angielskimi", "config09.ini"}
-        //    };
-
-        //    if (listBox1.SelectedItem != null)
-        //    {
-        //        string selectedFile = listBox1.SelectedItem.ToString();
-        //        if (fileDescriptions2.ContainsKey(selectedFile))
-        //        {
-        //            string fileName = fileDescriptions2[selectedFile];
-        //            string mainDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "./data/configs/");
-        //            System.IO.File.Copy(Path.Combine(mainDir, fileName), Path.Combine(mainDir, "..", "config.ini"), true);
-        //            Application.Restart();
-        //        }
-        //        else
-        //        {
-        //            string mainDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "./data/configs/");
-        //            System.IO.File.Copy(Path.Combine(mainDir, selectedFile), Path.Combine(mainDir, "..", "config.ini"), true);
-        //            Application.Restart();
-        //        }
-        //    }
-        //}
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> fileDescriptions2 = new Dictionary<string, string>()
+            Dictionary<string, string> fileDescriptions2 = new Dictionary<string, string>();
+            if (langSel == 1)
             {
-                {"Domyślne ustawienia", "config01.ini"},
-                {"Pobieranie muzyki - MP3", "config02.ini"},
-                {"Pobieranie muzyki - ALAC", "config03.ini"},
-                {"Pobieranie filmu - najlepsza jakość", "config04.ini"},
-                {"Pobieranie filmu z ograniczeniem daty", "config05.ini"},
-                {"Pobieranie filmu z ograniczeniem rozmiaru", "config06.ini"},
-                {"Pobieranie co 2 filmu z playlisty", "config07.ini"},
-                {"Pobieranie filmu z napisami polskimi", "config08.ini"},
-                {"Pobieranie filmu z napisami angielskimi", "config09.ini"}
-            };
+                fileDescriptions2 = new Dictionary<string, string>()
+                {
+                    {"Default Settings", "config01.ini"},
+                    {"Download music - MP3", "config02.ini"},
+                    {"Download music - ALAC", "config03.ini"},
+                    {"Download movie- best quality", "config04.ini"},
+                    {"Download every video fit in selected date", "config05.ini"},
+                    {"Download every video fit in selected size", "config06.ini"},
+                    {"Download every second video from playlist", "config07.ini"},
+                    {"Download video with Polish subtitles", "config08.ini"},
+                    {"Download video with English subtitles", "config09.ini"}
+                };
+            }
+            else
+            {
+                fileDescriptions2 = new Dictionary<string, string>()
+                {
+                    {"Domyślne ustawienia", "config01.ini"},
+                    {"Pobieranie muzyki - MP3", "config02.ini"},
+                    {"Pobieranie muzyki - ALAC", "config03.ini"},
+                    {"Pobieranie filmu - najlepsza jakość", "config04.ini"},
+                    {"Pobieranie filmu z ograniczeniem daty", "config05.ini"},
+                    {"Pobieranie filmu z ograniczeniem rozmiaru", "config06.ini"},
+                    {"Pobieranie co 2 filmu z playlisty", "config07.ini"},
+                    {"Pobieranie filmu z napisami polskimi", "config08.ini"},
+                    {"Pobieranie filmu z napisami angielskimi", "config09.ini"}
+                };
+            }
 
             if (listBox1.SelectedItem != null)
             {
@@ -369,18 +401,37 @@ namespace ytdl_gui
             string baseDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory);
             string configDirectory = Path.Combine(baseDirectory, "./data/configs/");
 
-            Dictionary<string, string> fileDescriptions2 = new Dictionary<string, string>()
+            Dictionary<string, string> fileDescriptions2 = new Dictionary<string, string>();
+            if (langSel == 1)
             {
-                {"Domyślne ustawienia", "config01.ini"},
-                {"Pobieranie muzyki - MP3", "config02.ini"},
-                {"Pobieranie muzyki - ALAC", "config03.ini"},
-                {"Pobieranie filmu - najlepsza jakość", "config04.ini"},
-                {"Pobieranie filmu z ograniczeniem daty", "config05.ini"},
-                {"Pobieranie filmu z ograniczeniem rozmiaru", "config06.ini"},
-                {"Pobieranie co 2 filmu z playlisty", "config07.ini"},
-                {"Pobieranie filmu z napisami polskimi", "config08.ini"},
-                {"Pobieranie filmu z napisami angielskimi", "config09.ini"}
-            };
+                fileDescriptions2 = new Dictionary<string, string>()
+                {
+                    {"Default Settings", "config01.ini"},
+                    {"Download music - MP3", "config02.ini"},
+                    {"Download music - ALAC", "config03.ini"},
+                    {"Download movie- best quality", "config04.ini"},
+                    {"Download every video fit in selected date", "config05.ini"},
+                    {"Download every video fit in selected size", "config06.ini"},
+                    {"Download every second video from playlist", "config07.ini"},
+                    {"Download video with Polish subtitles", "config08.ini"},
+                    {"Download video with English subtitles", "config09.ini"}
+                };
+            }
+            else
+            {
+                fileDescriptions2 = new Dictionary<string, string>()
+                {
+                    {"Domyślne ustawienia", "config01.ini"},
+                    {"Pobieranie muzyki - MP3", "config02.ini"},
+                    {"Pobieranie muzyki - ALAC", "config03.ini"},
+                    {"Pobieranie filmu - najlepsza jakość", "config04.ini"},
+                    {"Pobieranie filmu z ograniczeniem daty", "config05.ini"},
+                    {"Pobieranie filmu z ograniczeniem rozmiaru", "config06.ini"},
+                    {"Pobieranie co 2 filmu z playlisty", "config07.ini"},
+                    {"Pobieranie filmu z napisami polskimi", "config08.ini"},
+                    {"Pobieranie filmu z napisami angielskimi", "config09.ini"}
+                };
+            }
 
             if (listBox1.SelectedItem != null)
             {
