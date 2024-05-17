@@ -7,7 +7,28 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>g25.ico</ApplicationIcon>
+    <Title>YouTube Downloader</Title>
+    <Version>1.0</Version>
+    <Authors>Jakub Michalski</Authors>
+    <Company>WindowsBASE.pl</Company>
+    <Description>Program umożliwiający pobieranie filmów i muzyki z serwisów tj: YouTube, Spotify</Description>
+    <Copyright>Jakub Michalski</Copyright>
+    <PackageProjectUrl>https://windowsbase.pl</PackageProjectUrl>
+    <PackageIcon>g25.png</PackageIcon>
+    <RepositoryUrl></RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="g25.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Pulpit\g25.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2478.35" />
