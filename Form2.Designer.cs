@@ -35,6 +35,7 @@
             linkLabel1 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             linkLabel3 = new LinkLabel();
+            linkLabel4 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(12, 265);
             label2.Name = "label2";
-            label2.Size = new Size(280, 175);
+            label2.Size = new Size(280, 187);
             label2.TabIndex = 2;
             label2.Text = resources.GetString("label2.Text");
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -100,12 +101,24 @@
             linkLabel3.AutoSize = true;
             linkLabel3.BackColor = Color.Transparent;
             linkLabel3.LinkColor = Color.PaleTurquoise;
-            linkLabel3.Location = new Point(26, 309);
+            linkLabel3.Location = new Point(79, 309);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(144, 15);
             linkLabel3.TabIndex = 5;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "https://www.flaticon.com";
+            // 
+            // linkLabel4
+            // 
+            linkLabel4.AutoSize = true;
+            linkLabel4.BackColor = Color.Transparent;
+            linkLabel4.LinkColor = Color.PaleTurquoise;
+            linkLabel4.Location = new Point(87, 398);
+            linkLabel4.Name = "linkLabel4";
+            linkLabel4.Size = new Size(131, 15);
+            linkLabel4.TabIndex = 6;
+            linkLabel4.TabStop = true;
+            linkLabel4.Text = "https://windowsbase.pl";
             // 
             // Form2
             // 
@@ -114,6 +127,7 @@
             BackgroundImage = Properties.Resources.bkg3;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(304, 461);
+            Controls.Add(linkLabel4);
             Controls.Add(linkLabel3);
             Controls.Add(linkLabel2);
             Controls.Add(linkLabel1);
@@ -142,5 +156,6 @@
         private LinkLabel linkLabel1;
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel3;
+        private LinkLabel linkLabel4;
     }
 }
