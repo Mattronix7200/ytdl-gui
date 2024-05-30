@@ -66,6 +66,7 @@ namespace ytdl_gui
             LoadConfig();
             bkgSet();
 
+
             if (langSel == 1)
             {
                 languageSelected = 1;
@@ -2705,12 +2706,22 @@ namespace ytdl_gui
         {
             textBox19.Font = new Font("Segoe UI", 14);
             textBox19.ForeColor = Color.Black;
+
+            if (bkgSel == 7)
+            {
+                textBox19.ForeColor = Color.White;
+            }
         }
 
         private void textBox19_Enter(object sender, EventArgs e)
         {
             textBox19.Font = new Font("Segoe UI", 14);
             textBox19.ForeColor = Color.Black;
+
+            if (bkgSel == 7)
+            {
+                textBox19.ForeColor = Color.White;
+            }
 
             if (!System.String.IsNullOrEmpty(textBox19.Text))
             {
@@ -2730,6 +2741,7 @@ namespace ytdl_gui
         private Form3 form3;
         private Form5 form5;
         private Form6 form6;
+        private Form8 form8;
 
 
         private void button12_Click(object sender, EventArgs e)
@@ -3084,5 +3096,17 @@ namespace ytdl_gui
             bkgSet();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (form8 == null || form8.IsDisposed)
+            {
+                form8 = new Form8();
+                form8.Show();
+            }
+            else
+            {
+                form8.BringToFront();
+            }
+        }
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             pictureBox1 = new PictureBox();
             label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // label1
             // 
             label1.BackColor = Color.Black;
-            label1.Font = new Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label1.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(0, 107);
             label1.Name = "label1";
@@ -61,6 +62,20 @@
             label1.TextAlign = ContentAlignment.TopCenter;
             label1.UseWaitCursor = true;
             // 
+            // label2
+            // 
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 238);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(289, 0);
+            label2.Name = "label2";
+            label2.Padding = new Padding(3);
+            label2.Size = new Size(75, 19);
+            label2.TabIndex = 2;
+            label2.Text = "Wersja: 1.0.1";
+            label2.TextAlign = ContentAlignment.TopCenter;
+            label2.UseWaitCursor = true;
+            // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -70,6 +85,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(364, 126);
             ControlBox = false;
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Cursor = Cursors.WaitCursor;
@@ -91,5 +107,6 @@
 
         private PictureBox pictureBox1;
         public Label label1;
+        public Label label2;
     }
 }

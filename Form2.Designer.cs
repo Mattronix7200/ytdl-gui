@@ -146,7 +146,7 @@
             MinimumSize = new Size(320, 500);
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "YouTube Downloader 1.0";
+            Text = "YouTube Downloader";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

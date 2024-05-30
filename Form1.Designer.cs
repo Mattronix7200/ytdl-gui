@@ -229,6 +229,7 @@
             button10 = new Button();
             frameStatus = new Panel();
             updatenewInfo = new Label();
+            linkLabel1 = new LinkLabel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
@@ -1470,13 +1471,14 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.Location = new Point(335, 21);
             dateTimePicker1.MaxDate = new DateTime(2099, 12, 31, 0, 0, 0, 0);
             dateTimePicker1.MinDate = new DateTime(2005, 2, 1, 0, 0, 0, 0);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 25);
             dateTimePicker1.TabIndex = 26;
+            dateTimePicker1.Value = new DateTime(2005, 2, 1, 0, 0, 0, 0);
             // 
             // date2label
             // 
@@ -1498,23 +1500,25 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.Location = new Point(335, 53);
             dateTimePicker2.MaxDate = new DateTime(2099, 12, 31, 0, 0, 0, 0);
             dateTimePicker2.MinDate = new DateTime(2005, 2, 1, 0, 0, 0, 0);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(200, 25);
             dateTimePicker2.TabIndex = 29;
+            dateTimePicker2.Value = new DateTime(2005, 2, 1, 0, 0, 0, 0);
             // 
             // dateTimePicker3
             // 
-            dateTimePicker3.Format = DateTimePickerFormat.Short;
+            dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dateTimePicker3.Location = new Point(335, 86);
             dateTimePicker3.MaxDate = new DateTime(2099, 12, 31, 0, 0, 0, 0);
             dateTimePicker3.MinDate = new DateTime(2005, 2, 1, 0, 0, 0, 0);
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(200, 25);
             dateTimePicker3.TabIndex = 30;
+            dateTimePicker3.Value = new DateTime(2005, 2, 1, 0, 0, 0, 0);
             // 
             // checkBox26
             // 
@@ -2567,12 +2571,29 @@
             updatenewInfo.TabIndex = 33;
             updatenewInfo.Text = "DOSTĘPNA AKTUALIZACJA PROGRAMU, PRZEJDZ DO USTAWIEŃ LUB URUCHOM PONOWNIE ABY ZAKTUALIZOWAĆ";
             // 
+            // linkLabel1
+            // 
+            linkLabel1.ActiveLinkColor = Color.DarkCyan;
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.Cursor = Cursors.Help;
+            linkLabel1.LinkColor = Color.DarkCyan;
+            linkLabel1.Location = new Point(524, 36);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(73, 15);
+            linkLabel1.TabIndex = 33;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Co nowego?";
+            linkLabel1.VisitedLinkColor = Color.DarkCyan;
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 516);
+            Controls.Add(linkLabel1);
             Controls.Add(panel1);
             Controls.Add(frameStatus);
             Controls.Add(button10);
@@ -2591,7 +2612,7 @@
             MinimumSize = new Size(816, 555);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "YouTube Downloader 1.0";
+            Text = "YouTube Downloader 1.0.1";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -2656,6 +2677,7 @@
             frameStatus.ResumeLayout(false);
             frameStatus.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -2859,5 +2881,6 @@
         private CheckBox isDateOption1;
         private Panel frameStatus;
         private Label updatenewInfo;
+        private LinkLabel linkLabel1;
     }
 }

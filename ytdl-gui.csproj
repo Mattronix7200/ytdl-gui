@@ -17,6 +17,9 @@
     <PackageProjectUrl>https://windowsbase.pl</PackageProjectUrl>
     <PackageIcon>g25.png</PackageIcon>
     <RepositoryUrl></RepositoryUrl>
+    <Platforms>AnyCPU;x64</Platforms>
+    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,6 +40,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2478.35" />
+    <PackageReference Include="WebView2.Runtime.X64" Version="109.0.1518.78" />
   </ItemGroup>
 
   <ItemGroup>

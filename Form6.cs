@@ -13,6 +13,7 @@ using System.IO;
 using Microsoft.VisualBasic.Devices;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.LinkLabel;
 
 namespace ytdl_gui
 {
@@ -389,11 +390,54 @@ namespace ytdl_gui
                 }
 
                 string mainDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data", "configs");
+                string configPath = Path.Combine(mainDir, "..", "config.ini");
+                string[] lines = System.IO.File.ReadAllLines(configPath);
+                string langSelValue = "";
+                string bkgSelValue = "";
+                string textbox12Value = "";
+
+                foreach (string line in lines)
+                {
+                    if (line.StartsWith("bkgSel="))
+                    {
+                        bkgSelValue = line.Substring("bkgSel=".Length);
+                    }
+                    else if (line.StartsWith("langSel="))
+                    {
+                        langSelValue = line.Substring("langSel=".Length);
+                    }
+                    else if (line.StartsWith("textBox12="))
+                    {
+                        textbox12Value = line.Substring("textBox12=".Length);
+                    }
+                }
+
                 System.IO.File.Copy(Path.Combine(mainDir, fileName), Path.Combine(mainDir, "..", "config.ini"), true);
+                lines = System.IO.File.ReadAllLines(Path.Combine(mainDir, "..", "config.ini"));
+
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lines[i].StartsWith("bkgSel="))
+                    {
+                        lines[i] = "bkgSel=" + bkgSelValue;
+                    }
+                    else if (lines[i].StartsWith("langSel="))
+                    {
+                        lines[i] = "langSel=" + langSelValue;
+                    }
+                    else if (lines[i].StartsWith("textBox12="))
+                    {
+                        lines[i] = "textBox12=" + textbox12Value;
+                    }
+                }
+
+                System.IO.File.WriteAllLines(Path.Combine(mainDir, "..", "config.ini"), lines);
                 System.IO.File.WriteAllText(Path.Combine(mainDir, "..", "lastconfig.ini"), fileName);
                 Application.Restart();
+
             }
         }
+
 
 
         private void button2_Click(object sender, EventArgs e)
