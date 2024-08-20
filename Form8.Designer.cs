@@ -33,6 +33,8 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -50,7 +52,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label2.ForeColor = Color.DarkCyan;
-            label2.Location = new Point(24, 55);
+            label2.Location = new Point(24, 177);
             label2.Name = "label2";
             label2.Size = new Size(222, 17);
             label2.TabIndex = 1;
@@ -61,7 +63,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             label3.ForeColor = Color.DarkSlateGray;
-            label3.Location = new Point(46, 88);
+            label3.Location = new Point(46, 210);
             label3.Name = "label3";
             label3.Size = new Size(535, 105);
             label3.TabIndex = 2;
@@ -72,17 +74,41 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label4.ForeColor = Color.DarkCyan;
-            label4.Location = new Point(24, 210);
+            label4.Location = new Point(24, 332);
             label4.Name = "label4";
             label4.Size = new Size(222, 17);
             label4.TabIndex = 3;
             label4.Text = "Wersja 1.0.0 (Kompilacja: 19.05.2024)";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label5.ForeColor = Color.DarkSlateGray;
+            label5.Location = new Point(46, 85);
+            label5.Name = "label5";
+            label5.Size = new Size(554, 75);
+            label5.TabIndex = 4;
+            label5.Text = resources.GetString("label5.Text");
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label6.ForeColor = Color.DarkCyan;
+            label6.Location = new Point(24, 53);
+            label6.Name = "label6";
+            label6.Size = new Size(224, 17);
+            label6.TabIndex = 5;
+            label6.Text = "Wersja 1.0.2 (Kompilacja: 30.07.2024)";
             // 
             // Form8
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(644, 401);
+            Controls.Add(label6);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -105,5 +131,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Label label5;
+        private Label label6;
     }
 }

@@ -2612,7 +2612,7 @@
             MinimumSize = new Size(816, 555);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "YouTube Downloader 1.0.1";
+            Text = "YouTube Downloader 1.0.2";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

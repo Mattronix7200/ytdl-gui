@@ -126,6 +126,14 @@
 [ADDED]: Dodano panel umożliwiający podgląd ostatnich zmian wprowadzonych w aktualizacji
                   programu.</value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Zmiany w silniku pobierającym ytdlp:
+
+Naprawiono problem z wydobywaniem filmów oraz konwersją danych w konsoli, gdy link prowadził
+do serwisów: abematv, facebook, mlbtv, tiktok, vimeo, youtube. Różne poprawki konsoli, optymalizacja 
+parsowania JSON.
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
