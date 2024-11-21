@@ -72,7 +72,7 @@
             label2.Padding = new Padding(3);
             label2.Size = new Size(75, 19);
             label2.TabIndex = 2;
-            label2.Text = "Wersja: 1.0.2";
+            label2.Text = "Wersja: 1.0.6";
             label2.TextAlign = ContentAlignment.TopCenter;
             label2.UseWaitCursor = true;
             // 

@@ -281,6 +281,7 @@ namespace ytdl_gui
             string localVersion = File.ReadAllText(localVersionFilePath).Trim();
             string remoteVersionFileUrl = "https://windowsbase.pl/uploads/apps/ydlp-gui/version.txt";
             WebClient webClient = new();
+            webClient.Headers.Add("User-Agent: Other");   // -||-
             string remoteVersionFileContent = webClient.DownloadString(remoteVersionFileUrl);
             string[] remoteVersionLines = remoteVersionFileContent.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             string remoteVersion = "";
@@ -322,6 +323,7 @@ namespace ytdl_gui
             string localVersion = File.ReadAllText(localVersionFilePath).Trim();
             string remoteVersionFileUrl = "https://windowsbase.pl/uploads/apps/ydlp-gui/version.txt";
             WebClient webClient = new();
+            webClient.Headers.Add("User-Agent: Other");   // somehow fixes broken connection with server
             string remoteVersionFileContent = webClient.DownloadString(remoteVersionFileUrl);
             string[] remoteVersionLines = remoteVersionFileContent.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             string remoteVersion = "";

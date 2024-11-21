@@ -129,10 +129,20 @@
   <data name="label5.Text" xml:space="preserve">
     <value>Zmiany w silniku pobierającym ytdlp:
 
-Naprawiono problem z wydobywaniem filmów oraz konwersją danych w konsoli, gdy link prowadził
+[BUGFIX]: Naprawiono problem z wydobywaniem filmów oraz konwersją danych w konsoli, gdy link prowadził
 do serwisów: abematv, facebook, mlbtv, tiktok, vimeo, youtube. Różne poprawki konsoli, optymalizacja 
 parsowania JSON.
 </value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Aktualizacja silnika pobierajacego ytdlp do najnowszej wersji. 
+[BUGFIX]: Naprawiono m.in: ekstrakcję dla pobieranego wideo z serwisu YouTube, Instagram, Patreon.
+[BUGFIX]: Naprawiono problem z załączaniem plików cookie do esktraktora.</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Aktualizacja silnika pobierajacego ytdlp do najnowszej wersji. 
+[BUGFIX]: Naprawiono problem z błędem aplikacji uniemożliwiającej jej uruchomienie.
+[BUGFIX]: Naprawiono problem z uniemożliwieniem aktualizacji programu do nowszej wersji.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

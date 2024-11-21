@@ -9,7 +9,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>g25.ico</ApplicationIcon>
     <Title>YouTube Downloader</Title>
-    <Version>1.0.2</Version>
+    <Version>1.0.6</Version>
     <Authors>Jakub Michalski</Authors>
     <Company>WindowsBASE.pl</Company>
     <Description>Program umożliwiający pobieranie filmów i muzyki z serwisów tj: YouTube, Spotify</Description>
@@ -18,8 +18,8 @@
     <PackageIcon>g25.png</PackageIcon>
     <RepositoryUrl></RepositoryUrl>
     <Platforms>AnyCPU;x64</Platforms>
-    <FileVersion>1.0.2.0</FileVersion>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -39,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2478.35" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1587.40" />
     <PackageReference Include="WebView2.Runtime.X64" Version="109.0.1518.78" />
   </ItemGroup>
 

@@ -42,7 +42,7 @@
             webView.Location = new Point(0, 0);
             webView.Name = "webView";
             webView.Size = new Size(584, 361);
-            webView.Source = new Uri("https://windowsbase.pl/panel/reportbug.php", UriKind.Absolute);
+            webView.Source = new Uri("https://windowsbase.pl/contact_app", UriKind.Absolute);
             webView.TabIndex = 0;
             webView.ZoomFactor = 1D;
             webView.Click += webView21_Click;
