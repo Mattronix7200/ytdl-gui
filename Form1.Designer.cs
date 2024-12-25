@@ -142,6 +142,10 @@
             date3label = new Label();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker3 = new DateTimePicker();
+            groupBox12 = new GroupBox();
+            textBox21 = new TextBox();
+            checkBox32 = new CheckBox();
+            label14 = new Label();
             checkBox26 = new CheckBox();
             pictureBox4 = new PictureBox();
             label50 = new Label();
@@ -242,6 +246,7 @@
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             groupBox11.SuspendLayout();
+            groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -404,9 +409,9 @@
             label51.ForeColor = Color.Black;
             label51.Location = new Point(5, 4);
             label51.Name = "label51";
-            label51.Size = new Size(661, 25);
+            label51.Size = new Size(640, 25);
             label51.TabIndex = 2;
-            label51.Text = "→ Aby rozpocząć pobieranie, dodaj link a następnie kliknij przycisk \"START\".";
+            label51.Text = "Aby rozpocząć pobieranie, dodaj link a następnie kliknij przycisk \"START\".";
             // 
             // textBox19
             // 
@@ -441,10 +446,11 @@
             flowLayoutPanel1.Controls.Add(groupBox8);
             flowLayoutPanel1.Controls.Add(groupBox5);
             flowLayoutPanel1.Controls.Add(groupBox4);
+            flowLayoutPanel1.Controls.Add(groupBox12);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(19, 717);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(717, 2206);
+            flowLayoutPanel1.Size = new Size(717, 2416);
             flowLayoutPanel1.TabIndex = 26;
             // 
             // groupBox3
@@ -888,7 +894,6 @@
             textBox20.Name = "textBox20";
             textBox20.Size = new Size(475, 22);
             textBox20.TabIndex = 79;
-            textBox20.TextChanged += textBox20_TextChanged;
             // 
             // label41
             // 
@@ -1417,7 +1422,7 @@
             // 
             // groupBox11
             // 
-            groupBox11.BackColor = Color.Gainsboro;
+            groupBox11.BackColor = Color.Transparent;
             groupBox11.Controls.Add(isDateOption3);
             groupBox11.Controls.Add(isDateOption2);
             groupBox11.Controls.Add(isDateOption1);
@@ -1520,6 +1525,55 @@
             dateTimePicker3.TabIndex = 30;
             dateTimePicker3.Value = new DateTime(2005, 2, 1, 0, 0, 0, 0);
             // 
+            // groupBox12
+            // 
+            groupBox12.Controls.Add(textBox21);
+            groupBox12.Controls.Add(checkBox32);
+            groupBox12.Controls.Add(label14);
+            groupBox12.Enabled = false;
+            groupBox12.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            groupBox12.Location = new Point(3, 2209);
+            groupBox12.Name = "groupBox12";
+            groupBox12.Size = new Size(711, 204);
+            groupBox12.TabIndex = 34;
+            groupBox12.TabStop = false;
+            groupBox12.Text = "POLECENIE KONSOLOWE";
+            groupBox12.Visible = false;
+            // 
+            // textBox21
+            // 
+            textBox21.BackColor = SystemColors.HighlightText;
+            textBox21.BorderStyle = BorderStyle.FixedSingle;
+            textBox21.Font = new Font("Lucida Console", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            textBox21.ForeColor = SystemColors.InfoText;
+            textBox21.Location = new Point(25, 123);
+            textBox21.Multiline = true;
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(673, 68);
+            textBox21.TabIndex = 40;
+            // 
+            // checkBox32
+            // 
+            checkBox32.AutoSize = true;
+            checkBox32.Font = new Font("Segoe UI", 9F);
+            checkBox32.Location = new Point(25, 98);
+            checkBox32.Name = "checkBox32";
+            checkBox32.Size = new Size(377, 19);
+            checkBox32.TabIndex = 39;
+            checkBox32.Text = "Zastosuj ustawienia pobierania z poziomu polecenia konsolowego.";
+            checkBox32.UseVisualStyleBackColor = true;
+            checkBox32.CheckedChanged += checkBox32_CheckedChanged;
+            // 
+            // label14
+            // 
+            label14.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 238);
+            label14.ForeColor = SystemColors.Highlight;
+            label14.Location = new Point(24, 30);
+            label14.Name = "label14";
+            label14.Size = new Size(671, 65);
+            label14.TabIndex = 38;
+            label14.Text = resources.GetString("label14.Text");
+            // 
             // checkBox26
             // 
             checkBox26.Appearance = Appearance.Button;
@@ -1549,10 +1603,11 @@
             // label50
             // 
             label50.AutoSize = true;
-            label50.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label50.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic);
+            label50.ForeColor = Color.FromArgb(192, 0, 0);
             label50.Location = new Point(21, 666);
             label50.Name = "label50";
-            label50.Size = new Size(436, 40);
+            label50.Size = new Size(384, 32);
             label50.TabIndex = 23;
             label50.Text = "ZAAWANSOWANE USTAWIENIA";
             // 
@@ -1884,7 +1939,7 @@
             panel1.Controls.Add(toolStripStatusLabel1);
             panel1.Controls.Add(toolStripProgressBar1);
             panel1.Controls.Add(panel4);
-            panel1.Location = new Point(16, 110);
+            panel1.Location = new Point(16, 108);
             panel1.Name = "panel1";
             panel1.Size = new Size(770, 394);
             panel1.TabIndex = 10;
@@ -1994,12 +2049,13 @@
             // label34
             // 
             label34.AutoSize = true;
-            label34.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label34.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 238);
+            label34.ForeColor = Color.FromArgb(192, 0, 0);
             label34.Location = new Point(16, 2);
             label34.Name = "label34";
-            label34.Size = new Size(568, 40);
+            label34.Size = new Size(317, 32);
             label34.TabIndex = 24;
-            label34.Text = "PODSTAWOWE USTAWIENIA POBIERANIA";
+            label34.Text = "USTAWIENIA POBIERANIA";
             // 
             // button1
             // 
@@ -2593,8 +2649,9 @@
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 516);
-            Controls.Add(linkLabel1);
             Controls.Add(panel1);
+            Controls.Add(panel2);
+            Controls.Add(linkLabel1);
             Controls.Add(frameStatus);
             Controls.Add(button10);
             Controls.Add(button2);
@@ -2603,7 +2660,6 @@
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox11);
             Controls.Add(pictureBox1);
-            Controls.Add(panel2);
             Controls.Add(panel3);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -2612,7 +2668,7 @@
             MinimumSize = new Size(816, 555);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "YouTube Downloader 1.0.6";
+            Text = "YouTube Downloader 1.0.8";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -2630,6 +2686,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             groupBox11.ResumeLayout(false);
             groupBox11.PerformLayout();
+            groupBox12.ResumeLayout(false);
+            groupBox12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
@@ -2882,5 +2940,9 @@
         private Panel frameStatus;
         private Label updatenewInfo;
         private LinkLabel linkLabel1;
+        private GroupBox groupBox12;
+        private TextBox textBox21;
+        private CheckBox checkBox32;
+        private Label label14;
     }
 }

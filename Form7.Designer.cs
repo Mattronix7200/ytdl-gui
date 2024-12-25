@@ -50,16 +50,16 @@
             // 
             // label1
             // 
-            label1.BackColor = Color.Black;
-            label1.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Calibri", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(0, 107);
+            label1.Location = new Point(54, 95);
             label1.Name = "label1";
             label1.Padding = new Padding(3);
-            label1.Size = new Size(364, 19);
+            label1.Size = new Size(277, 24);
             label1.TabIndex = 1;
             label1.Text = "label1";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.UseWaitCursor = true;
             // 
             // label2
@@ -72,7 +72,7 @@
             label2.Padding = new Padding(3);
             label2.Size = new Size(75, 19);
             label2.TabIndex = 2;
-            label2.Text = "Wersja: 1.0.6";
+            label2.Text = "Wersja: 1.0.8";
             label2.TextAlign = ContentAlignment.TopCenter;
             label2.UseWaitCursor = true;
             // 

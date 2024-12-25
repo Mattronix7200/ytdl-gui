@@ -74,16 +74,16 @@ namespace ytdl_gui
                 lang2.Enabled = false;
                 enlabel.BackColor = Color.FromArgb(171, 250, 208);
                 lang2.BackColor = Color.FromArgb(171, 250, 208);
-                pllabel.BackColor = Color.White;
-                lang1.BackColor = Color.White;
+                pllabel.BackColor = Color.Transparent;
+                lang1.BackColor = Color.Transparent;
             }
             if (langSel == 0)
             {
                 languageSelected = 0;
                 lang1.Enabled = false;
                 lang2.Enabled = true;
-                enlabel.BackColor = Color.White;
-                lang2.BackColor = Color.White;
+                enlabel.BackColor = Color.Transparent;
+                lang2.BackColor = Color.Transparent;
                 pllabel.BackColor = Color.FromArgb(171, 250, 208);
                 lang1.BackColor = Color.FromArgb(171, 250, 208);
             }
@@ -100,7 +100,7 @@ namespace ytdl_gui
 
             if (checkBox31.Checked == true)
             {
-                groupBox11.BackColor = Color.White;
+                groupBox11.BackColor = Color.Transparent;
                 date1label.Enabled = true;
                 date2label.Enabled = true;
                 date3label.Enabled = true;
@@ -226,6 +226,7 @@ namespace ytdl_gui
             checkBox29.CheckedChanged += new EventHandler(ControlChanged);
             checkBox30.CheckedChanged += new EventHandler(ControlChanged);
             checkBox31.CheckedChanged += new EventHandler(ControlChanged);
+            checkBox32.CheckedChanged += new EventHandler(ControlChanged);
             isDateOption1.CheckedChanged += new EventHandler(ControlChanged);
             isDateOption2.CheckedChanged += new EventHandler(ControlChanged);
             isDateOption3.CheckedChanged += new EventHandler(ControlChanged);
@@ -248,6 +249,7 @@ namespace ytdl_gui
             textBox17.TextChanged += new EventHandler(ControlChanged);
             textBox18.TextChanged += new EventHandler(ControlChanged);
             textBox20.TextChanged += new EventHandler(ControlChanged);
+            textBox21.TextChanged += new EventHandler(ControlChanged);
             comboBox1.SelectedIndexChanged += new EventHandler(ControlChanged);
             comboBox2.SelectedIndexChanged += new EventHandler(ControlChanged);
             comboBox3.SelectedIndexChanged += new EventHandler(ControlChanged);
@@ -705,7 +707,7 @@ namespace ytdl_gui
 
             if (checkBox31.Checked == true)
             {
-                groupBox11.BackColor = Color.White;
+                groupBox11.BackColor = Color.Transparent;
                 date1label.Enabled = true;
                 date2label.Enabled = true;
                 date3label.Enabled = true;
@@ -972,6 +974,9 @@ namespace ytdl_gui
                             case "checkBox31":
                                 checkBox31.Checked = bool.Parse(parts[1]);
                                 break;
+                            case "checkBox32":
+                                checkBox32.Checked = bool.Parse(parts[1]);
+                                break;
                             case "isDateOption1":
                                 isDateOption1.Checked = bool.Parse(parts[1]);
                                 break;
@@ -1038,6 +1043,9 @@ namespace ytdl_gui
                             case "textBox20":
                                 textBox20.Text = parts[1];
                                 break;
+                            case "textBox21":
+                                textBox21.Text = parts[1];
+                                break;
                             case "comboBox1":
                                 comboBox1.SelectedItem = parts[1];
                                 break;
@@ -1071,15 +1079,25 @@ namespace ytdl_gui
                             case "comboBox11":
                                 comboBox11.SelectedItem = parts[1];
                                 break;
+                            //case "dateTimePicker1":
+                            //    dateTimePicker1.Value = DateTime.Parse(parts[1]);
+                            //    break;
+                            //case "dateTimePicker2":
+                            //    dateTimePicker2.Value = DateTime.Parse(parts[1]);
+                            //    break;
+                            //case "dateTimePicker3":
+                            //    dateTimePicker3.Value = DateTime.Parse(parts[1]);
+                            //    break;
                             case "dateTimePicker1":
-                                dateTimePicker1.Value = DateTime.Parse(parts[1]);
+                                dateTimePicker1.Value = DateTime.ParseExact(parts[1], "dd.MM.yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
                                 break;
                             case "dateTimePicker2":
-                                dateTimePicker2.Value = DateTime.Parse(parts[1]);
+                                dateTimePicker2.Value = DateTime.ParseExact(parts[1], "dd.MM.yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
                                 break;
                             case "dateTimePicker3":
-                                dateTimePicker3.Value = DateTime.Parse(parts[1]);
+                                dateTimePicker3.Value = DateTime.ParseExact(parts[1], "dd.MM.yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
                                 break;
+
                         }
                     }
                 }
@@ -1150,6 +1168,7 @@ namespace ytdl_gui
                 checkBox28.Checked = true; //konwersja audio na format
                 checkBox30.Checked = false; //tylko WEBM, MP4 (szybsze pobieranie YT)
                 checkBox31.Checked = false; //pobieranie z użyciem daty
+                checkBox32.Checked = false; // włączenie własnej komendy pobierania
                 textBox1.Text = string.Empty; //proxy
                 textBox2.Text = string.Empty; //geo proxy
                 textBox4.Text = string.Empty; //ip klienta
@@ -1162,6 +1181,7 @@ namespace ytdl_gui
                 textBox17.Text = string.Empty; //passwd
                 textBox18.Text = string.Empty; //2fa
                 textBox20.Text = string.Empty; //spotify cookies 
+                textBox21.Text = string.Empty; //własne ustawienia
                 checkBox26.Checked = false; //ukryj / pokaż - groupBox3,8,5,4
                 //dateTimePicker1 = //data publikacji w
                 //dateTimePicker2 = //data publikacji przed
@@ -1586,6 +1606,7 @@ namespace ytdl_gui
                 sw.WriteLine("checkBox29=" + checkBox29.Checked);
                 sw.WriteLine("checkBox30=" + checkBox30.Checked);
                 sw.WriteLine("checkBox31=" + checkBox31.Checked);
+                sw.WriteLine("checkBox32=" + checkBox32.Checked);
                 sw.WriteLine("isDateOption1=" + isDateOption1.Checked);
                 sw.WriteLine("isDateOption2=" + isDateOption2.Checked);
                 sw.WriteLine("isDateOption3=" + isDateOption3.Checked);
@@ -1608,6 +1629,7 @@ namespace ytdl_gui
                 sw.WriteLine("textBox17=" + textBox17.Text);
                 sw.WriteLine("textBox18=" + textBox18.Text);
                 sw.WriteLine("textBox20=" + textBox20.Text);
+                sw.WriteLine("textBox21=" + textBox21.Text);
                 sw.WriteLine("comboBox1=" + comboBox1.SelectedItem);
                 sw.WriteLine("comboBox2=" + comboBox2.SelectedItem);
                 sw.WriteLine("comboBox3=" + comboBox3.SelectedItem);
@@ -1737,6 +1759,7 @@ namespace ytdl_gui
                 string selectedVal_textBox18 = "--twofactor " + textBox18.Text + " ";
                 string selectedVal_textBox20 = "--cookie-file " + textBox20.Text + " --bitrate disable ";
                 string selectedVal_textBox20_ytdl = "--cookies " + textBox20.Text + " ";
+                string selectedVal_textBox21 = textBox21.Text + " ";
                 string? selectedVal_comboBox3 = comboBox3.SelectedItem?.ToString();
                 string? valueToStore1 = "--audio-quality " + comboBox3Map[selectedVal_comboBox3] + " ";
                 string? valueToStore1_spotify = "--bitrate " + comboBox3Map[selectedVal_comboBox3] + " ";
@@ -1787,8 +1810,9 @@ namespace ytdl_gui
                 string selectedVal_dateTimePicker2 = "--datebefore " + dateTimePicker2.Value.ToString("yyyyMMdd") + " ";
                 string selectedVal_dateTimePicker3 = "--dateafter " + dateTimePicker3.Value.ToString("yyyyMMdd") + " ";
 
-                string finalResult = null;
-                string finalResult2 = null;
+                // używaj własnej komendy jako ustawienia 
+                string? finalResult = null;
+                string? finalResult2 = null;
 
                 if (checkBox1.Checked == true)
                 {
@@ -1992,6 +2016,15 @@ namespace ytdl_gui
                     }
                 }
 
+                if (checkBox32.Checked == true)
+                {
+                    finalResult = null;
+                    finalResult2 = null;
+
+                    finalResult = selectedVal_textBox21;
+                    finalResult2 = selectedVal_textBox21;
+                }
+
                 finalResult += valueToStore1;
                 finalResult2 += valueToStore1_spotify;
                 finalResult += valueToStore3;
@@ -2089,6 +2122,12 @@ namespace ytdl_gui
                 {
                     finalResult += selectedVal_textBox20_ytdl;
                     finalResult2 += selectedVal_textBox20;
+                }
+
+                if (!System.String.IsNullOrEmpty(textBox21.Text))
+                {
+                    finalResult = selectedVal_textBox21;
+                    finalResult2 = selectedVal_textBox21;
                 }
 
 
@@ -2252,16 +2291,16 @@ namespace ytdl_gui
 
                     // Obsługa zdarzenia do przechwytywania danych wyjściowych procesu w czasie rzeczywistym
                     process.OutputDataReceived += (sender, e) =>
-                    {
-                        if (!System.String.IsNullOrEmpty(e.Data))
                         {
-                            // Aktualizuj interfejs użytkownika z wyjściowymi danymi procesu
-                            richTextBox1.Invoke((MethodInvoker)(() =>
+                            if (!System.String.IsNullOrEmpty(e.Data))
                             {
-                                richTextBox1.AppendText(e.Data + Environment.NewLine);
-                            }));
-                        }
-                    };
+                                // Aktualizuj interfejs użytkownika z wyjściowymi danymi procesu
+                                richTextBox1.Invoke((MethodInvoker)(() =>
+                                {
+                                    richTextBox1.AppendText(e.Data + Environment.NewLine);
+                                }));
+                            }
+                        };
 
                     Task.Run(async () =>
                     {
@@ -2375,9 +2414,6 @@ namespace ytdl_gui
                                     }));
                                 }
                             };
-
-
-
 
                             process.OutputDataReceived += (sender, args) =>
                             {
@@ -2532,6 +2568,8 @@ namespace ytdl_gui
                         label50.Visible = true;
                         flowLayoutPanel1.Enabled = true;
                         flowLayoutPanel1.Visible = true;
+                        groupBox12.Enabled = true;
+                        groupBox12.Visible = true;
                         SetLanguage();
                         checkBox26.Text = translations["Form1.ldyn01"];
                     }
@@ -2549,6 +2587,8 @@ namespace ytdl_gui
                         label50.Visible = true;
                         flowLayoutPanel1.Enabled = true;
                         flowLayoutPanel1.Visible = true;
+                        groupBox12.Enabled = true;
+                        groupBox12.Visible = true;
                         SetLanguage();
                         checkBox26.Text = "Ukryj ustawienia zaawansowane";
                     }
@@ -2560,6 +2600,8 @@ namespace ytdl_gui
                 label50.Visible = false;
                 flowLayoutPanel1.Enabled = false;
                 flowLayoutPanel1.Visible = false;
+                groupBox12.Enabled = false;
+                groupBox12.Visible = false;
                 SetLanguage();
 
                 if (languageSelected == 1)
@@ -2839,10 +2881,6 @@ namespace ytdl_gui
             }
         }
 
-        private void textBox20_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button9_Click(object sender, EventArgs e)
         {
@@ -3110,5 +3148,14 @@ namespace ytdl_gui
                 form8.BringToFront();
             }
         }
+
+        private void checkBox32_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBox32.Checked)
+            {
+                textBox21.Clear(); 
+            }
+        }
+
     }
 }

@@ -63,34 +63,38 @@
             label11 = new Label();
             label9 = new Label();
             panel2 = new Panel();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            label3 = new Label();
-            textBox10 = new TextBox();
-            label5 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label10 = new Label();
             textBox20 = new TextBox();
+            textBox6 = new TextBox();
             label21 = new Label();
+            textBox7 = new TextBox();
             textBox21 = new TextBox();
+            textBox8 = new TextBox();
             label22 = new Label();
+            textBox9 = new TextBox();
             textBox22 = new TextBox();
+            label3 = new Label();
             label23 = new Label();
+            textBox10 = new TextBox();
             textBox23 = new TextBox();
+            label5 = new Label();
             label24 = new Label();
+            label7 = new Label();
             textBox24 = new TextBox();
+            label8 = new Label();
             label25 = new Label();
+            label10 = new Label();
             textBox25 = new TextBox();
+            label29 = new Label();
             label26 = new Label();
+            textBox28 = new TextBox();
             textBox26 = new TextBox();
+            label28 = new Label();
             label27 = new Label();
             textBox27 = new TextBox();
-            label28 = new Label();
-            textBox28 = new TextBox();
-            label29 = new Label();
+            textBox29 = new TextBox();
+            label30 = new Label();
+            textBox30 = new TextBox();
+            label31 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -123,6 +127,10 @@
             panel1.AutoScroll = true;
             panel1.AutoScrollMargin = new Size(0, 50);
             panel1.BackColor = SystemColors.ButtonHighlight;
+            panel1.Controls.Add(textBox30);
+            panel1.Controls.Add(label31);
+            panel1.Controls.Add(textBox29);
+            panel1.Controls.Add(label30);
             panel1.Controls.Add(textBox19);
             panel1.Controls.Add(label20);
             panel1.Controls.Add(textBox18);
@@ -162,7 +170,7 @@
             // textBox19
             // 
             textBox19.BorderStyle = BorderStyle.None;
-            textBox19.Location = new Point(20, 4241);
+            textBox19.Location = new Point(20, 4397);
             textBox19.Multiline = true;
             textBox19.Name = "textBox19";
             textBox19.Size = new Size(561, 43);
@@ -172,7 +180,7 @@
             // label20
             // 
             label20.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label20.Location = new Point(20, 4202);
+            label20.Location = new Point(20, 4358);
             label20.Name = "label20";
             label20.Size = new Size(561, 45);
             label20.TabIndex = 50;
@@ -489,6 +497,16 @@
             panel2.TabIndex = 4;
             panel2.Visible = false;
             // 
+            // textBox20
+            // 
+            textBox20.BorderStyle = BorderStyle.None;
+            textBox20.Location = new Point(15, 2932);
+            textBox20.Multiline = true;
+            textBox20.Name = "textBox20";
+            textBox20.Size = new Size(561, 43);
+            textBox20.TabIndex = 69;
+            textBox20.Text = "Contact us in the contact form (click on \"send\" icon), providing details of your problem.";
+            // 
             // textBox6
             // 
             textBox6.BorderStyle = BorderStyle.None;
@@ -498,6 +516,15 @@
             textBox6.Size = new Size(561, 89);
             textBox6.TabIndex = 30;
             textBox6.Text = resources.GetString("textBox6.Text");
+            // 
+            // label21
+            // 
+            label21.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label21.Location = new Point(15, 2893);
+            label21.Name = "label21";
+            label21.Size = new Size(561, 45);
+            label21.TabIndex = 68;
+            label21.Text = "I don't see my problem on this list.";
             // 
             // textBox7
             // 
@@ -509,6 +536,16 @@
             textBox7.TabIndex = 29;
             textBox7.Text = "Spotify's download module does not support this format, so if you select a certain format, it will be converted to another according to this list: \r\n\r\nAAC - MP3, \r\nALAC - M4A, \r\nVORBIS -> OGG";
             // 
+            // textBox21
+            // 
+            textBox21.BorderStyle = BorderStyle.None;
+            textBox21.Location = new Point(15, 2842);
+            textBox21.Multiline = true;
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(561, 43);
+            textBox21.TabIndex = 67;
+            textBox21.Text = "It doesn't and it's completely free, you can download as many movies and music as you want, the only restrictions are sites that use DRM protection.";
+            // 
             // textBox8
             // 
             textBox8.BorderStyle = BorderStyle.None;
@@ -518,6 +555,15 @@
             textBox8.Size = new Size(561, 40);
             textBox8.TabIndex = 28;
             textBox8.Text = "If you have changed the default download settings, by choosing a different format, video quality, adding subtitles or limiting network speed, downloading the video may take longer.";
+            // 
+            // label22
+            // 
+            label22.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label22.Location = new Point(15, 2803);
+            label22.Name = "label22";
+            label22.Size = new Size(561, 45);
+            label22.TabIndex = 66;
+            label22.Text = "Does the program have any limitations?";
             // 
             // textBox9
             // 
@@ -529,6 +575,16 @@
             textBox9.TabIndex = 27;
             textBox9.Text = resources.GetString("textBox9.Text");
             // 
+            // textBox22
+            // 
+            textBox22.BorderStyle = BorderStyle.None;
+            textBox22.Location = new Point(15, 2757);
+            textBox22.Multiline = true;
+            textBox22.Name = "textBox22";
+            textBox22.Size = new Size(561, 43);
+            textBox22.TabIndex = 65;
+            textBox22.Text = "In this case we can not help, probably the site from which you download has enabled protection against copying content - DRM, which the program unfortunately does not support.";
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -538,6 +594,15 @@
             label3.Size = new Size(266, 19);
             label3.TabIndex = 16;
             label3.Text = "What video format should I choose?";
+            // 
+            // label23
+            // 
+            label23.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label23.Location = new Point(15, 2709);
+            label23.Name = "label23";
+            label23.Size = new Size(561, 45);
+            label23.TabIndex = 64;
+            label23.Text = "I continue to receive HTTP 403 error, when downloading the file, even after adding cookies.";
             // 
             // textBox10
             // 
@@ -549,101 +614,6 @@
             textBox10.TabIndex = 23;
             textBox10.Text = resources.GetString("textBox10.Text");
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label5.Location = new Point(15, 834);
-            label5.Name = "label5";
-            label5.Size = new Size(268, 19);
-            label5.TabIndex = 26;
-            label5.Text = "Why is the video downloading slow?";
-            // 
-            // label7
-            // 
-            label7.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label7.Location = new Point(15, 1082);
-            label7.Name = "label7";
-            label7.Size = new Size(561, 46);
-            label7.TabIndex = 21;
-            label7.Text = "[Spotify/YouTube Music] A quality limitation message is displayed during download. How to fix it?";
-            // 
-            // label8
-            // 
-            label8.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label8.Location = new Point(15, 923);
-            label8.Name = "label8";
-            label8.Size = new Size(531, 46);
-            label8.TabIndex = 19;
-            label8.Text = "[Spotify] Why do I have another format downloaded after selecting ALAC, AAC format?";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label10.Location = new Point(15, 9);
-            label10.Name = "label10";
-            label10.Size = new Size(274, 19);
-            label10.TabIndex = 2;
-            label10.Text = "Which audio format should I choose?";
-            // 
-            // textBox20
-            // 
-            textBox20.BorderStyle = BorderStyle.None;
-            textBox20.Location = new Point(15, 2932);
-            textBox20.Multiline = true;
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(561, 43);
-            textBox20.TabIndex = 69;
-            textBox20.Text = "Contact us in the contact form (click on \"send\" icon), providing details of your problem.";
-            // 
-            // label21
-            // 
-            label21.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label21.Location = new Point(15, 2893);
-            label21.Name = "label21";
-            label21.Size = new Size(561, 45);
-            label21.TabIndex = 68;
-            label21.Text = "I don't see my problem on this list.";
-            // 
-            // textBox21
-            // 
-            textBox21.BorderStyle = BorderStyle.None;
-            textBox21.Location = new Point(15, 2842);
-            textBox21.Multiline = true;
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(561, 43);
-            textBox21.TabIndex = 67;
-            textBox21.Text = "It doesn't and it's completely free, you can download as many movies and music as you want, the only restrictions are sites that use DRM protection.";
-            // 
-            // label22
-            // 
-            label22.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label22.Location = new Point(15, 2803);
-            label22.Name = "label22";
-            label22.Size = new Size(561, 45);
-            label22.TabIndex = 66;
-            label22.Text = "Does the program have any limitations?";
-            // 
-            // textBox22
-            // 
-            textBox22.BorderStyle = BorderStyle.None;
-            textBox22.Location = new Point(15, 2757);
-            textBox22.Multiline = true;
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(561, 43);
-            textBox22.TabIndex = 65;
-            textBox22.Text = "In this case we can not help, probably the site from which you download has enabled protection against copying content - DRM, which the program unfortunately does not support.";
-            // 
-            // label23
-            // 
-            label23.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label23.Location = new Point(15, 2709);
-            label23.Name = "label23";
-            label23.Size = new Size(561, 45);
-            label23.TabIndex = 64;
-            label23.Text = "I continue to receive HTTP 403 error, when downloading the file, even after adding cookies.";
-            // 
             // textBox23
             // 
             textBox23.BorderStyle = BorderStyle.None;
@@ -654,6 +624,16 @@
             textBox23.TabIndex = 63;
             textBox23.Text = resources.GetString("textBox23.Text");
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label5.Location = new Point(15, 834);
+            label5.Name = "label5";
+            label5.Size = new Size(268, 19);
+            label5.TabIndex = 26;
+            label5.Text = "Why is the video downloading slow?";
+            // 
             // label24
             // 
             label24.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
@@ -662,6 +642,15 @@
             label24.Size = new Size(561, 31);
             label24.TabIndex = 62;
             label24.Text = "I'm getting an HTTP 403 error, while downloading the file.";
+            // 
+            // label7
+            // 
+            label7.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label7.Location = new Point(15, 1082);
+            label7.Name = "label7";
+            label7.Size = new Size(561, 46);
+            label7.TabIndex = 21;
+            label7.Text = "[Spotify/YouTube Music] A quality limitation message is displayed during download. How to fix it?";
             // 
             // textBox24
             // 
@@ -673,6 +662,15 @@
             textBox24.TabIndex = 61;
             textBox24.Text = resources.GetString("textBox24.Text");
             // 
+            // label8
+            // 
+            label8.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label8.Location = new Point(15, 923);
+            label8.Name = "label8";
+            label8.Size = new Size(531, 46);
+            label8.TabIndex = 19;
+            label8.Text = "[Spotify] Why do I have another format downloaded after selecting ALAC, AAC format?";
+            // 
             // label25
             // 
             label25.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
@@ -681,6 +679,16 @@
             label25.Size = new Size(561, 32);
             label25.TabIndex = 60;
             label25.Text = "How do I pass cookies?";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label10.Location = new Point(15, 9);
+            label10.Name = "label10";
+            label10.Size = new Size(274, 19);
+            label10.TabIndex = 2;
+            label10.Text = "Which audio format should I choose?";
             // 
             // textBox25
             // 
@@ -692,6 +700,15 @@
             textBox25.TabIndex = 59;
             textBox25.Text = resources.GetString("textBox25.Text");
             // 
+            // label29
+            // 
+            label29.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label29.Location = new Point(15, 1234);
+            label29.Name = "label29";
+            label29.Size = new Size(561, 31);
+            label29.TabIndex = 52;
+            label29.Text = "What other services does this program support?";
+            // 
             // label26
             // 
             label26.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
@@ -700,6 +717,16 @@
             label26.Size = new Size(561, 52);
             label26.TabIndex = 58;
             label26.Text = "While downloading i see: HTTP Error 429: Too Many Requests or 402: Payment Required";
+            // 
+            // textBox28
+            // 
+            textBox28.BorderStyle = BorderStyle.None;
+            textBox28.Location = new Point(15, 1268);
+            textBox28.Multiline = true;
+            textBox28.Name = "textBox28";
+            textBox28.Size = new Size(561, 123);
+            textBox28.TabIndex = 53;
+            textBox28.Text = resources.GetString("textBox28.Text");
             // 
             // textBox26
             // 
@@ -710,6 +737,15 @@
             textBox26.Size = new Size(561, 227);
             textBox26.TabIndex = 57;
             textBox26.Text = resources.GetString("textBox26.Text");
+            // 
+            // label28
+            // 
+            label28.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label28.Location = new Point(15, 1394);
+            label28.Name = "label28";
+            label28.Size = new Size(561, 31);
+            label28.TabIndex = 54;
+            label28.Text = "After the download is complete, I can't see the downloaded audio file";
             // 
             // label27
             // 
@@ -730,33 +766,43 @@
             textBox27.TabIndex = 55;
             textBox27.Text = "Uncheck the \"Skip conversion of downloaded video\" option. - This fix works when you download files from SoundCloud. Otherwise, make sure you specify the correct folder in the download settings.";
             // 
-            // label28
+            // textBox29
             // 
-            label28.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label28.Location = new Point(15, 1394);
-            label28.Name = "label28";
-            label28.Size = new Size(561, 31);
-            label28.TabIndex = 54;
-            label28.Text = "After the download is complete, I can't see the downloaded audio file";
+            textBox29.BorderStyle = BorderStyle.None;
+            textBox29.Location = new Point(20, 4236);
+            textBox29.Multiline = true;
+            textBox29.Name = "textBox29";
+            textBox29.Size = new Size(561, 43);
+            textBox29.TabIndex = 53;
+            textBox29.Text = "Wybierz inne ustawienia lub skorzystaj z gotowych profili ustawień, np: ustawienia pobierania wysokiej jakości filmów lub muzyki.";
             // 
-            // textBox28
+            // label30
             // 
-            textBox28.BorderStyle = BorderStyle.None;
-            textBox28.Location = new Point(15, 1268);
-            textBox28.Multiline = true;
-            textBox28.Name = "textBox28";
-            textBox28.Size = new Size(561, 123);
-            textBox28.TabIndex = 53;
-            textBox28.Text = resources.GetString("textBox28.Text");
+            label30.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label30.Location = new Point(20, 4197);
+            label30.Name = "label30";
+            label30.Size = new Size(561, 45);
+            label30.TabIndex = 52;
+            label30.Text = "Pobrany plik jest słabej jakości lub nie słychać w nim dzwięku. Co zrobić?";
             // 
-            // label29
+            // textBox30
             // 
-            label29.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label29.Location = new Point(15, 1234);
-            label29.Name = "label29";
-            label29.Size = new Size(561, 31);
-            label29.TabIndex = 52;
-            label29.Text = "What other services does this program support?";
+            textBox30.BorderStyle = BorderStyle.None;
+            textBox30.Location = new Point(20, 4321);
+            textBox30.Multiline = true;
+            textBox30.Name = "textBox30";
+            textBox30.Size = new Size(561, 43);
+            textBox30.TabIndex = 55;
+            textBox30.Text = "Na stronie projeku: https://github.com/yt-dlp/yt-dlp";
+            // 
+            // label31
+            // 
+            label31.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label31.Location = new Point(20, 4282);
+            label31.Name = "label31";
+            label31.Size = new Size(561, 45);
+            label31.TabIndex = 54;
+            label31.Text = "Gdzie znajdę dokumentację silnika pobierającego?";
             // 
             // Form3
             // 
@@ -849,5 +895,9 @@
         private Label label28;
         private Label label27;
         private TextBox textBox27;
+        private TextBox textBox29;
+        private Label label30;
+        private TextBox textBox30;
+        private Label label31;
     }
 }

@@ -43,13 +43,17 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(12, 5);
             label1.Name = "label1";
             label1.Size = new Size(131, 32);
             label1.TabIndex = 0;
@@ -60,7 +64,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label2.ForeColor = Color.DarkCyan;
-            label2.Location = new Point(24, 512);
+            label2.Location = new Point(24, 663);
             label2.Name = "label2";
             label2.Size = new Size(222, 17);
             label2.TabIndex = 1;
@@ -71,7 +75,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             label3.ForeColor = Color.DarkSlateGray;
-            label3.Location = new Point(34, 544);
+            label3.Location = new Point(34, 695);
             label3.Name = "label3";
             label3.Size = new Size(535, 105);
             label3.TabIndex = 2;
@@ -82,7 +86,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label4.ForeColor = Color.DarkCyan;
-            label4.Location = new Point(24, 667);
+            label4.Location = new Point(24, 818);
             label4.Name = "label4";
             label4.Size = new Size(222, 17);
             label4.TabIndex = 3;
@@ -93,7 +97,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             label5.ForeColor = Color.DarkSlateGray;
-            label5.Location = new Point(34, 419);
+            label5.Location = new Point(34, 570);
             label5.Name = "label5";
             label5.Size = new Size(586, 75);
             label5.TabIndex = 4;
@@ -104,7 +108,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label6.ForeColor = Color.DarkCyan;
-            label6.Location = new Point(24, 388);
+            label6.Location = new Point(24, 539);
             label6.Name = "label6";
             label6.Size = new Size(224, 17);
             label6.TabIndex = 5;
@@ -115,7 +119,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label7.ForeColor = Color.DarkCyan;
-            label7.Location = new Point(24, 303);
+            label7.Location = new Point(24, 454);
             label7.Name = "label7";
             label7.Size = new Size(224, 17);
             label7.TabIndex = 7;
@@ -126,7 +130,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             label8.ForeColor = Color.DarkSlateGray;
-            label8.Location = new Point(34, 336);
+            label8.Location = new Point(34, 487);
             label8.Name = "label8";
             label8.Size = new Size(436, 30);
             label8.TabIndex = 6;
@@ -137,7 +141,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label9.ForeColor = Color.DarkCyan;
-            label9.Location = new Point(24, 212);
+            label9.Location = new Point(24, 363);
             label9.Name = "label9";
             label9.Size = new Size(220, 17);
             label9.TabIndex = 9;
@@ -148,7 +152,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             label10.ForeColor = Color.DarkSlateGray;
-            label10.Location = new Point(34, 244);
+            label10.Location = new Point(34, 395);
             label10.Name = "label10";
             label10.Size = new Size(542, 45);
             label10.TabIndex = 8;
@@ -159,7 +163,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label11.ForeColor = Color.DarkCyan;
-            label11.Location = new Point(24, 123);
+            label11.Location = new Point(24, 274);
             label11.Name = "label11";
             label11.Size = new Size(220, 17);
             label11.TabIndex = 11;
@@ -170,7 +174,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             label12.ForeColor = Color.DarkSlateGray;
-            label12.Location = new Point(34, 152);
+            label12.Location = new Point(34, 303);
             label12.Name = "label12";
             label12.Size = new Size(496, 45);
             label12.TabIndex = 10;
@@ -181,7 +185,7 @@
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label13.ForeColor = Color.DarkCyan;
-            label13.Location = new Point(24, 53);
+            label13.Location = new Point(24, 204);
             label13.Name = "label13";
             label13.Size = new Size(218, 17);
             label13.TabIndex = 13;
@@ -192,11 +196,55 @@
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             label14.ForeColor = Color.DarkSlateGray;
-            label14.Location = new Point(34, 82);
+            label14.Location = new Point(34, 233);
             label14.Name = "label14";
             label14.Size = new Size(508, 30);
             label14.TabIndex = 12;
             label14.Text = "Aktualizacja silnika pobierajacego ytdlp do najnowszej wersji. \r\nUsunięto niedziałające wsparcie dla autoryzacji połączeń z kontami YouTube za pomocą OAuth.";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label15.ForeColor = Color.DarkCyan;
+            label15.Location = new Point(24, 130);
+            label15.Name = "label15";
+            label15.Size = new Size(220, 17);
+            label15.TabIndex = 15;
+            label15.Text = "Wersja 1.0.7 (Kompilacja: 12.12.2024)";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label16.ForeColor = Color.DarkSlateGray;
+            label16.Location = new Point(34, 159);
+            label16.Name = "label16";
+            label16.Size = new Size(378, 30);
+            label16.TabIndex = 14;
+            label16.Text = "Aktualizacja silnika pobierajacego ytdlp do najnowszej wersji. \r\nNaprawiono problem z ekstakcją sygnatur oraz filmów w formacie HD.";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label17.ForeColor = Color.DarkCyan;
+            label17.Location = new Point(24, 47);
+            label17.Name = "label17";
+            label17.Size = new Size(222, 17);
+            label17.TabIndex = 17;
+            label17.Text = "Wersja 1.0.8 (Kompilacja: 26.12.2024)";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label18.ForeColor = Color.DarkSlateGray;
+            label18.Location = new Point(34, 76);
+            label18.Name = "label18";
+            label18.Size = new Size(545, 45);
+            label18.TabIndex = 16;
+            label18.Text = resources.GetString("label18.Text");
             // 
             // Form8
             // 
@@ -206,6 +254,10 @@
             AutoScrollMinSize = new Size(0, 50);
             AutoSize = true;
             ClientSize = new Size(644, 401);
+            Controls.Add(label17);
+            Controls.Add(label18);
+            Controls.Add(label15);
+            Controls.Add(label16);
             Controls.Add(label13);
             Controls.Add(label14);
             Controls.Add(label11);
@@ -248,5 +300,9 @@
         private Label label12;
         private Label label13;
         private Label label14;
+        private Label label15;
+        private Label label16;
+        private Label label17;
+        private Label label18;
     }
 }

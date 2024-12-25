@@ -9,7 +9,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>g25.ico</ApplicationIcon>
     <Title>YouTube Downloader</Title>
-    <Version>1.0.6</Version>
+    <Version>1.0.8</Version>
     <Authors>Jakub Michalski</Authors>
     <Company>WindowsBASE.pl</Company>
     <Description>Program umożliwiający pobieranie filmów i muzyki z serwisów tj: YouTube, Spotify</Description>
